@@ -21,11 +21,11 @@ body {
 
 /* Header */
 header {
-    background: url('image/bg2.jpg') no-repeat center center; /* Full-width image */
+    background: url('image/bg2.jpg') no-repeat center center;
     background-size: cover;
     color: white;
     text-align: center;
-    padding: 120px 20px; /* Add more padding for better visual effect */
+    padding: 120px 20px;
     position: relative;
 }
 
@@ -41,7 +41,7 @@ header::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Add dark overlay */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
 }
 
@@ -91,15 +91,39 @@ header .btn-primary:hover {
 }
 
 .about-content img {
-    width: 60%;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    height: auto;
+    margin-bottom: 0;
 }
 
 .about-content p {
-    font-size: 1.2rem;
-    width: 50%;
-    text-align: left;
+    word-wrap: break-word;
+    line-height: 1.5;
+    padding: 10px;
+    font-size: 1.2em;
+    max-width: 600px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    #about {
+        padding: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 80%;
+    }
+
+    .about-content p {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
 }
 
 
@@ -117,8 +141,9 @@ header .btn-primary:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Create flexible grid */
     gap: 30px;
+    justify-items: center; /* Center the items */
 }
 
 .service-item {
@@ -127,10 +152,11 @@ header .btn-primary:hover {
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 100%; /* Make sure the items take full width within their column */
 }
 
 .service-item i {
-    color: #ff6347; /* Icon color */
+    color: #ff6347;
     margin-bottom: 20px;
 }
 
@@ -142,8 +168,6 @@ header .btn-primary:hover {
 .service-item p {
     font-size: 1rem;
 }
-
-
 
 /* Contact Section */
 #contact {
