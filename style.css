@@ -141,7 +141,7 @@ header .btn-primary:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Create flexible grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create flexible grid */
     gap: 30px;
     justify-items: center; /* Center the items */
 }
