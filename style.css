@@ -30,25 +30,15 @@ body {
 /* =========================
    Header
 ========================= */
+
 header {
-    background: url('image/bg2.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
+    background: linear-gradient(135deg, #eef3ff 0%, #f7f9ff 100%);
+    color: #1f2937;
     text-align: center;
     padding: 160px 20px;
     position: relative;
 }
 
-header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: 1;
-}
 
 header .container {
     position: relative;
@@ -59,17 +49,19 @@ header h1 {
     font-size: 4.2rem;
     margin-bottom: 20px;
     font-weight: bold;
+    color: #1f2937;
 }
 
 header p {
     font-size: 1.4rem;
     max-width: 700px;
     margin: 0 auto 35px;
+    color: #4b5563;
 }
 
 .btn-primary {
     display: inline-block;
-    background-color: #8b5e3c;
+    background-color: #5b6cff;
     color: white;
     padding: 14px 34px;
     text-decoration: none;
@@ -77,13 +69,13 @@ header p {
     font-size: 1.1rem;
     font-weight: 600;
     transition: all 0.25s ease;
-    box-shadow: 0 8px 18px rgba(139, 94, 60, 0.25);
+    box-shadow: 0 10px 20px rgba(91, 108, 255, 0.25);
 }
 
 .btn-primary:hover {
-    background-color: #6f472d;
+    background-color: #4457e6;
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(111, 71, 45, 0.35);
+    box-shadow: 0 14px 28px rgba(68, 87, 230, 0.35);
 }
 
 /* =========================
