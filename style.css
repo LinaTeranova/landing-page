@@ -28,54 +28,86 @@ body {
 }
 
 /* =========================
-   Header
+   Header (Improved)
 ========================= */
 
 header {
-    background: linear-gradient(135deg, #eef3ff 0%, #f7f9ff 100%);
-    color: #1f2937;
-    text-align: center;
-    padding: 160px 20px;
     position: relative;
+    text-align: center;
+    padding: 170px 20px;
+    color: #1f2937;
+
+    /* layered soft background */
+    background:
+        radial-gradient(circle at 20% 30%, rgba(91, 108, 255, 0.10), transparent 40%),
+        radial-gradient(circle at 80% 60%, rgba(139, 94, 60, 0.08), transparent 45%),
+        linear-gradient(135deg, #eef3ff 0%, #f7f9ff 100%);
 }
 
+/* subtle floating shapes (adds life without clutter) */
+header::before {
+    content: '';
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 120px;
+    height: 120px;
+    background: rgba(91, 108, 255, 0.08);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 15%;
+    right: 12%;
+    width: 160px;
+    height: 160px;
+    background: rgba(139, 94, 60, 0.06);
+    border-radius: 50%;
+    filter: blur(12px);
+}
 
 header .container {
     position: relative;
     z-index: 2;
 }
 
+/* typography upgrade */
 header h1 {
-    font-size: 4.2rem;
+    font-size: 4.3rem;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: -1px;
     color: #1f2937;
 }
 
 header p {
-    font-size: 1.4rem;
-    max-width: 700px;
+    font-size: 1.35rem;
+    max-width: 680px;
     margin: 0 auto 35px;
     color: #4b5563;
 }
 
+/* button (slightly more premium feel) */
 .btn-primary {
     display: inline-block;
     background-color: #5b6cff;
     color: white;
-    padding: 14px 34px;
+    padding: 14px 36px;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 999px;
     font-size: 1.1rem;
     font-weight: 600;
     transition: all 0.25s ease;
-    box-shadow: 0 10px 20px rgba(91, 108, 255, 0.25);
+    box-shadow: 0 12px 24px rgba(91, 108, 255, 0.22);
 }
 
 .btn-primary:hover {
     background-color: #4457e6;
-    transform: translateY(-2px);
-    box-shadow: 0 14px 28px rgba(68, 87, 230, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 18px 34px rgba(68, 87, 230, 0.30);
 }
 
 /* =========================
