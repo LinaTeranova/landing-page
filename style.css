@@ -27,115 +27,62 @@ body {
     padding: 20px;
 }
 
+
 /* =========================
-   Header (Animated Upgrade)
+   Hero Section (Modern Layout)
 ========================= */
 
 header {
-    position: relative;
-    text-align: center;
-    padding: 170px 20px;
-    color: #1f2937;
+    background: linear-gradient(135deg, #eef3ff 0%, #f7f9ff 100%);
+    padding: 120px 20px;
     overflow: hidden;
-
-    /* animated gradient background */
-    background: linear-gradient(
-        -45deg,
-        #eef3ff,
-        #f7f9ff,
-        #e9edff,
-        #fdfcff
-    );
-    background-size: 400% 400%;
-    animation: gradientMove 12s ease infinite;
 }
 
-/* gradient animation */
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+/* layout split */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
 }
 
-/* floating blur shapes */
-header::before,
-header::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(45px);
-    opacity: 0.35;
-    z-index: 1;
+/* left text */
+.hero-text {
+    flex: 1;
+    text-align: left;
 }
 
-/* left blob */
-header::before {
-    width: 280px;
-    height: 280px;
-    background: #5b6cff;
-    top: -80px;
-    left: -60px;
-    animation: float1 8s ease-in-out infinite;
-}
-
-/* right blob */
-header::after {
-    width: 320px;
-    height: 320px;
-    background: #8b5e3c;
-    bottom: -120px;
-    right: -80px;
-    animation: float2 10s ease-in-out infinite;
-}
-
-/* blob animations */
-@keyframes float1 {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(30px);
-    }
-}
-
-@keyframes float2 {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-25px);
-    }
-}
-
-/* keep content above background */
-header .container {
-    position: relative;
-    z-index: 2;
-}
-
-/* typography */
-header h1 {
-    font-size: 4.3rem;
-    margin-bottom: 20px;
+.hero-text h1 {
+    font-size: 4rem;
     font-weight: 800;
-    letter-spacing: -1px;
     color: #1f2937;
+    margin-bottom: 20px;
+    line-height: 1.1;
 }
 
-header p {
-    font-size: 1.35rem;
-    max-width: 680px;
-    margin: 0 auto 35px;
+.hero-text p {
+    font-size: 1.3rem;
     color: #4b5563;
+    max-width: 500px;
+    margin-bottom: 30px;
 }
 
-/* button */
+/* right image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    object-fit: cover;
+}
+
+/* button stays same but slightly improved */
 .btn-primary {
     display: inline-block;
     background-color: #5b6cff;
@@ -153,6 +100,29 @@ header p {
     background-color: #4457e6;
     transform: translateY(-3px);
     box-shadow: 0 18px 34px rgba(68, 87, 230, 0.30);
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin: 0 auto 30px;
+    }
+
+    .hero-image img {
+        max-width: 320px;
+    }
 }
 
 /* =========================
