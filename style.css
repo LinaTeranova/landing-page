@@ -69,7 +69,7 @@ header p {
 
 .btn-primary {
     display: inline-block;
-    background-color: #4f7cff;
+    background-color: #8b5e3c;
     color: white;
     padding: 14px 34px;
     text-decoration: none;
@@ -77,13 +77,13 @@ header p {
     font-size: 1.1rem;
     font-weight: 600;
     transition: all 0.25s ease;
-    box-shadow: 0 8px 18px rgba(79, 124, 255, 0.25);
+    box-shadow: 0 8px 18px rgba(139, 94, 60, 0.25);
 }
 
 .btn-primary:hover {
-    background-color: #3b63e0;
+    background-color: #6f472d;
     transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(59, 99, 224, 0.35);
+    box-shadow: 0 12px 25px rgba(111, 71, 45, 0.35);
 }
 
 /* =========================
